@@ -21,7 +21,7 @@ export default function App() {
 
       <FlatList
         data={courseGoals}
-        renderItem={(itemData) => <GoalItem title={itemData.item.value} />}
+        renderItem={(itemData) => <GoalItem onDelete={() => console.log('Does this worK?')} title={itemData.item.value} />}
       />
 
       <StatusBar style="auto" />
