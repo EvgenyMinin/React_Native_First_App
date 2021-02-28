@@ -10,6 +10,10 @@ export default function App() {
   const [isModalVisible, setIsModalVisible] = useState(false);
 
   const addGoalHandler = (goalTitle) => {
+    if (goalTitle.length === 0) {
+      return;
+    }
+    
     setCourseGoals((courseGoals) => [
       ...courseGoals,
       { id: Math.random().toString(), value: goalTitle },
